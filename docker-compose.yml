@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+  server:
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
