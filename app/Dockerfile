@@ -5,7 +5,7 @@ ENV NODE_ENV=production
 WORKDIR /usr/app
 
 # Install dependencies
-COPY package*.json .
+COPY package.json .
 COPY package-lock.json .
 RUN npm install --production --quiet
 
